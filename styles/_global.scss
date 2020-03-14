@@ -1,0 +1,65 @@
+/*  Global Styles  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    scroll-snap-type: y mandatory;
+    flex-flow: column;
+    overflow-y: scroll;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+h1 {
+    font-size: $header1;
+    color: $gray-text;
+}
+
+h2 {
+    font-size: $header2;
+}
+
+h3 {
+    font-size: $header3;
+}
+
+h4,
+h5 {
+    font-size: $header4;
+}
+
+li,
+button,
+label,
+input,
+p,
+a {
+    font-size: $text;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.section-header {
+    flex: 1 1 40rem;
+    min-height: 100vh;
+}

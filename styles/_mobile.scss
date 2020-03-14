@@ -1,0 +1,156 @@
+/*  Media Queries  */
+
+@media screen and (max-width: 1330px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    /*  Global  */
+
+    html {
+        font-size: 45%;
+    }
+
+    body {
+        scroll-snap-type: initial;
+    }
+
+    section {
+        scroll-snap-align: initial;
+    }
+
+    /*  Font Sizes  */
+
+    h1 {
+        font-size: calc(#{$header1-mobile} + 1vw);
+    }
+
+    h2 {
+        font-size: calc(#{$header2-mobile} + 1vw);
+    }
+
+    h3 {
+        font-size: calc(#{$header3-mobile} + 1vw);
+    }
+
+    h4,
+    h5 {
+        font-size: calc(#{$header4-mobile} + 1vw);
+    }
+
+    li,
+    button,
+    label,
+    input,
+    p,
+    a {
+        font-size: calc(#{$text-mobile} + 1vw);
+    }
+
+    /*  Misc.  */
+
+    .hero-image,
+    nav {
+        display: none;
+    }
+
+    .section-header {
+        @include flex(center, center, column);
+        flex: 1 1 10rem;
+        min-height: 10vh;
+        width: 100%;
+        padding: 0;
+    }
+
+    /*  Hero Section  */
+
+    #hero {
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.95)),
+            url(../img/hero.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero-text {
+        width: 100vw;
+        background: none;
+        position: relative;
+        top: 25vh;
+
+        ul {
+            li {
+                padding-right: 6rem;
+            }
+        }
+    }
+
+    /*  About Section  */
+
+    #about {
+        @include flex(center, center, column);
+    }
+
+    .about-header {
+        order: 1;
+    }
+
+    .about-content {
+        order: 2;
+        min-height: 90vh;
+        width: 100vw;
+        padding: 0 5vw;
+    }
+
+    /*  Projects Section  */
+
+    #projects {
+        @include flex(center, center, column);
+    }
+
+    .projects-header {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .projects-content {
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        min-height: 90vh;
+        overflow-y: initial;
+        min-height: fit-content;
+    }
+
+    .project {
+        flex: 1 1 45rem;
+        height: 30rem;
+        justify-self: center;
+        max-width: 45rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .hero-text {
+        ul {
+            li {
+                padding-right: 4rem;
+            }
+        }
+    }
+
+    .about-content {
+        img {
+            height: 20rem;
+        }
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .about-content {
+        img {
+            display: none;
+        }
+    }
+}

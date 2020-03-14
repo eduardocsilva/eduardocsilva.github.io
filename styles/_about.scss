@@ -1,0 +1,45 @@
+/*  About Section  */
+
+#about {
+    @include flex(center, center, row);
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background: $color-1;
+}
+
+.about-header {
+    background: $color-1;
+    padding-left: 5rem;
+    @include flex(flex-start, center, row);
+
+    h2 {
+        font-family: "Pattaya", sans-serif;
+        font-weight: bold;
+        color: $color-4;
+        text-align: start;
+        display: table-caption;
+    }
+}
+
+.about-content {
+    @include flex(center, center, column);
+    flex: 10 1 40rem;
+    min-height: 100vh;
+    background: $color-3;
+    color: white;
+
+    li {
+        text-align: justify;
+        margin-top: 0.5rem;
+    }
+
+    img {
+        margin-top: 5rem;
+        border-radius: 50%;
+        height: 30rem;
+    }
+}
+
+.about-text {
+    @include margins;
+}

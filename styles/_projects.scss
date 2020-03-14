@@ -1,0 +1,60 @@
+/*  Projects Section  */
+
+#projects {
+    @include flex(center, center, row);
+    min-height: 100vh;
+    background: #1b2a49;
+}
+
+.projects-header {
+    @include flex(flex-end, center, row);
+    background: #1b2a49;
+    padding-right: 5rem;
+    min-height: 100vh;
+
+    h2 {
+        font-family: "Pattaya", sans-serif;
+        font-weight: bold;
+        color: $color-4;
+        text-align: start;
+    }
+}
+
+.projects-content {
+    @include flex(space-between, center, row);
+    flex: 50 1 40rem;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    width: 100%;
+    background: #27496d;
+    color: white;
+    overflow-y: scroll;
+}
+
+.project {
+    margin: 5rem;
+    height: 35rem;
+    flex: 1 1 40rem;
+    @include flex(flex-start, center, column);
+    background: #1b2a49;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    a {
+        @include flex(flex-start, center, column);
+
+        h4 {
+            margin-top: 2rem;
+        }
+
+        img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            position: absolute;
+            top: 20%;
+        }
+    }
+}

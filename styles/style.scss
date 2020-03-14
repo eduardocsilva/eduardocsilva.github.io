@@ -1,0 +1,45 @@
+/*  Variables  */
+
+$header1: 8rem;
+$header2: 8rem;
+$header3: 3rem;
+$header4: 2rem;
+$text: 2rem;
+
+$header1-mobile: 5rem;
+$header2-mobile: 4.5rem;
+$header3-mobile: 2rem;
+$header4-mobile: 1.3rem;
+$text-mobile: 1.3rem;
+
+$gray-text: #333;
+$background: white;
+
+$color-1: #7a6757;
+$color-2: #1b2a49;
+$color-3: #594739;
+$color-4: white;
+
+/*  Mixin's  */
+
+@mixin flex($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin margins {
+    width: 90%;
+    margin: auto;
+}
+
+/*  Imports  */
+
+@import "global";
+@import "nav-bar";
+@import "hero";
+@import "about";
+@import "projects";
+@import "animations";
+@import "mobile";
