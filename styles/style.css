@@ -300,6 +300,8 @@ nav li {
           flex-direction: row;
   min-height: 100vh;
   background: #1b2a49;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projects-header {
@@ -332,9 +334,9 @@ nav li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -357,9 +359,10 @@ nav li {
 .project {
   margin: 5rem;
   height: 35rem;
+  max-width: 50rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+      -ms-flex: 1 1 50rem;
+          flex: 1 1 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,6 +381,10 @@ nav li {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-box-shadow: 1px 1px 3px black;
+          box-shadow: 1px 1px 3px black;
 }
 
 .project a {
@@ -397,7 +404,8 @@ nav li {
 }
 
 .project a h4 {
-  margin-top: 2rem;
+  text-align: center;
+  margin: 2.3rem 0.5rem;
 }
 
 .project a img {
@@ -407,6 +415,13 @@ nav li {
      object-fit: cover;
   position: absolute;
   top: 20%;
+}
+
+.project:hover, .project:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 1px 1px 5px black;
+          box-shadow: 1px 1px 5px black;
 }
 
 /*  Animations  */
@@ -565,6 +580,9 @@ nav li {
     width: 100vw;
     padding: 0 5vw;
   }
+  .about-content img {
+    height: 25rem;
+  }
   /*  Projects Section  */
   #projects {
     display: -webkit-box;
@@ -622,7 +640,7 @@ nav li {
     padding-right: 4rem;
   }
   .about-content img {
-    height: 20rem;
+    height: 25rem;
   }
 }
 

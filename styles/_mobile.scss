@@ -101,6 +101,10 @@
         min-height: 90vh;
         width: 100vw;
         padding: 0 5vw;
+
+        img {
+            height: 25rem;
+        }
     }
 
     /*  Projects Section  */
@@ -142,7 +146,7 @@
 
     .about-content {
         img {
-            height: 20rem;
+            height: 25rem;
         }
     }
 }

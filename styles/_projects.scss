@@ -4,6 +4,7 @@
     @include flex(center, center, row);
     min-height: 100vh;
     background: #1b2a49;
+    flex-wrap: wrap;
 }
 
 .projects-header {
@@ -21,7 +22,7 @@
 }
 
 .projects-content {
-    @include flex(space-between, center, row);
+    @include flex(center, center, row);
     flex: 50 1 40rem;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -34,19 +35,23 @@
 .project {
     margin: 5rem;
     height: 35rem;
-    flex: 1 1 40rem;
+    max-width: 50rem;
+    flex: 1 1 50rem;
     @include flex(flex-start, center, column);
     background: #1b2a49;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 1px 1px 3px black;
 
     a {
         @include flex(flex-start, center, column);
 
         h4 {
-            margin-top: 2rem;
+            text-align: center;
+            margin: 2.3rem 0.5rem;
         }
 
         img {
@@ -56,5 +61,10 @@
             position: absolute;
             top: 20%;
         }
+    }
+
+    &:hover, &:focus {
+        transform: scale(1.1);
+        box-shadow: 1px 1px 5px black;
     }
 }
