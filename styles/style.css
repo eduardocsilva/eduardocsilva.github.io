@@ -295,27 +295,6 @@ a {
   height: 20%;
 }
 
-.card-title a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.card-title a h4 {
-  text-align: center;
-  margin: 2.3rem 0.5rem;
-}
-
 .card-content {
   display: -webkit-box;
   display: -ms-flexbox;

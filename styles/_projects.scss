@@ -55,15 +55,6 @@
 .card-title {
     @include flex(center, center, column);
     height: 20%;
-
-    a {
-        @include flex(flex-start, center, column);
-
-        h4 {
-            text-align: center;
-            margin: 2.3rem 0.5rem;
-        }
-    }
 }
 
 .card-content {
