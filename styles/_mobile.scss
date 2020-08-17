@@ -51,8 +51,7 @@
 
     /*  Misc.  */
 
-    .hero-image,
-    nav {
+    .hero-image {
         display: none;
     }
 
@@ -67,44 +66,22 @@
     /*  Hero Section  */
 
     #hero {
+        justify-content: left;
         background: linear-gradient(transparent, rgba(0, 0, 0, 0.95)),
             url(../img/hero.jpg);
         background-position: center;
         background-size: cover;
     }
 
-    .hero-text {
+    .hero-container {
         width: 100vw;
+        background: none;
+    }
+
+    .hero-text {
         background: none;
         position: relative;
         top: 25vh;
-
-        ul {
-            li {
-                padding-right: 6rem;
-            }
-        }
-    }
-
-    /*  About Section  */
-
-    #about {
-        @include flex(center, center, column);
-    }
-
-    .about-header {
-        order: 1;
-    }
-
-    .about-content {
-        order: 2;
-        min-height: 90vh;
-        width: 100vw;
-        padding: 0 5vw;
-
-        img {
-            height: 25rem;
-        }
     }
 
     /*  Projects Section  */
@@ -121,52 +98,17 @@
 
     .projects-content {
         @include flex(center, center, row);
+        flex: 50 1 40rem;
         flex-wrap: wrap;
         min-height: 90vh;
         overflow-y: initial;
         min-height: fit-content;
     }
 
-    .project {
+    .project-card {
         flex: 1 1 45rem;
         height: 30rem;
         justify-self: center;
         max-width: 45rem;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .hero-text {
-        ul {
-            li {
-                padding-right: 4rem;
-            }
-        }
-    }
-
-    .about-content {
-        img {
-            height: 25rem;
-        }
-    }
-}
-
-@media screen and (max-height: 700px) {
-    #about {
-        @include flex(center, center, row);
-        min-height: initial;
-        flex-wrap: wrap;
-        background: $color-1;
-    }
-
-    .about-content {
-        img {
-            display: none;
-        }
-    }
-
-    .about-text {
-        margin: 2rem auto;
-        width: 90vw;
     }
 }
