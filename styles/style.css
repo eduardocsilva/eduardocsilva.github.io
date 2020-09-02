@@ -180,6 +180,11 @@ a {
   height: 5rem;
 }
 
+.hero-text ul img:hover, .hero-text ul img:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /*  Projects Section  */
 #projects {
   display: -webkit-box;

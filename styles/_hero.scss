@@ -59,6 +59,11 @@
 
         img {
             height: 5rem;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+            }
         }
     }
 }
