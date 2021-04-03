@@ -176,11 +176,14 @@ a {
   opacity: 0;
 }
 
-.hero-text ul img {
-  height: 5rem;
+.hero-text ul i {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.hero-text ul img:hover, .hero-text ul img:focus {
+.hero-text ul i:hover, .hero-text ul i:focus {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
